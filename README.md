@@ -7,7 +7,7 @@ Real-time offboard control commands to MAVSDK from external sources over UDP, in
 
 
 ## Overview
-This project significantly broadens the offboard control capabilities of MAVSDK-Python by introducing an easy mechanism for receiving and processing drone control commands via UDP. The new `receiver.py` script and `ControlPacket` class facilitate the integration of control commands from external sources, even different languages or technologies (such as image processing systems). These enhancements are particularly useful in scenarios where MAVSDK does not directly manage the command generation process, allowing for a highly flexible, system-agnostic approach to drone command and control.
+This project simplifies and extends the offboard control capabilities of MAVSDK-Python by introducing an easy mechanism for receiving and processing drone control commands via UDP. The new `receiver.py` script and `ControlPacket` class facilitate the integration of control commands from external sources (even an Arduino), and even different languages or technologies (such as image processing systems). These enhancements are particularly useful in scenarios where MAVSDK does not directly manage the command generation process, allowing for a highly flexible, system-agnostic approach to drone command and control.
 
 ### Key Components
 - **Universal Command Reception (`receiver.py`)**: Acts as a bridge to receive control commands via UDP, enabling integration with systems that do not natively interface with MAVSDK or are written in different programming languages.
@@ -31,7 +31,7 @@ This project significantly broadens the offboard control capabilities of MAVSDK-
 2. **Create a Virtual Environment (recommended)**:
     ```bash
     python3 -m venv venv
-    source venv/bin/activate  # For Windows: .env\Scriptsctivate
+    source venv/bin/activate  # For Windows: .\env\Scripts\activate
     ```
     Alternatively, you can use your global Python environment.
 
@@ -80,8 +80,8 @@ Testing on a real drone is risky in offboard mode. Do it at your own risk and on
 - Supporting additional communication protocols
 
 ## Additional Resources
-For more MAVSDK tutorials and basics, check out my YouTube channel:
-[YouTube Tutorial](https://www.youtube.com/watch?v=SM0WtREzqqE)
+For more MAVSDK tutorials and basics, check out my YouTube tutorial on the basics of MAVSDK:
+[MAVSDK Introduction + GCS GUI App example using Python Tkinter](https://www.youtube.com/watch?v=SM0WtREzqqE)
 
 ## Contribution
 Contributions are welcome! Please open issues or submit pull requests with your improvements.
