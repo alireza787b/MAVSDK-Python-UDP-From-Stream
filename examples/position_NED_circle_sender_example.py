@@ -43,7 +43,7 @@ import sys
 import time
 import select
 from math import sin, cos, pi
-from control_packet import ControlPacket, SetpointMode
+from examples.control_packet import ControlPacket, SetpointMode
 
 # Constants defining communication parameters and motion characteristics
 SEND_RATE = 0.1  # Packet send rate in seconds (10 Hz)

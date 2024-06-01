@@ -45,7 +45,7 @@ Configure the UDP IP and port settings in `receiver.py`. If using a real drone w
 
 ```python
 # Global Defaults
-DEFAULT_CONNECTION_TYPE = 'udp'
+DEFAULT_CONNECTION_TYPE = 'udp' or 'serial'
 DEFAULT_PORT_UDP = '14540'
 DEFAULT_PORT_SERIAL = '/dev/ttyS0'  # Raspberry Pi default TTL
 

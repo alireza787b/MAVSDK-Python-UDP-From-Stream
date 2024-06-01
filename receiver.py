@@ -70,10 +70,10 @@ import argparse
 import mavsdk
 from mavsdk import System
 from mavsdk.offboard import *
-from control_packet import ControlPacket, SetpointMode
+from examples.control_packet import ControlPacket, SetpointMode
 
 # Global Defaults
-DEFAULT_CONNECTION_TYPE = 'udp'
+DEFAULT_CONNECTION_TYPE = 'udp' # or 'serial'
 DEFAULT_PORT_UDP = '14540'
 DEFAULT_PORT_SERIAL = '/dev/ttyS0'  # Raspberry Pi default TTL
 

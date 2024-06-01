@@ -62,7 +62,7 @@ The code is designed to be clear and modifiable for different use cases, allowin
 import socket
 import pygame
 import sys
-from control_packet import ControlPacket, SetpointMode
+from examples.control_packet import ControlPacket, SetpointMode
 
 # Constants for communication and control
 UDP_IP = "127.0.0.1"
