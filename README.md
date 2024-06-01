@@ -87,4 +87,4 @@ For more MAVSDK tutorials and basics, check out my YouTube tutorial on the basic
 Contributions are welcome! Please open issues or submit pull requests with your improvements.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the Apache-2.0 license.
