@@ -68,6 +68,13 @@ BUFFER_SIZE = 1024
     python3 examples/body_velocity_sender_example.py
     ```
 
+
+### Simulation Testing
+To test the setup, you will need a SITL (Software In The Loop) interface on your computer. You can use JMAVSim, Gazebo, AirSim, or X-Plane. For Windows users, it is recommended to use WSL2. 
+
+- [Tutorial on using PX4 SITL with WSL2](https://www.youtube.com/watch?v=iVU8ZNoMn_U)
+- [Official PX4 Documentation](https://docs.px4.io/main/en/simulation/)
+
 ### Writing Your Own Commands
 You can write your own command scripts in any language that supports UDP. Just follow the protocol defined in `control_packet.py` for sending and handling commands.
 
