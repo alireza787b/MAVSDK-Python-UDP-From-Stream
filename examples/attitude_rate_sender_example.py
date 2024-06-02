@@ -50,7 +50,7 @@ Author:
 - Date: May 2024
 
 Dependencies:
--------------
+------------m-
 - Pygame for GUI operations.
 - MAVSDK for drone control interfacing.
 - Python's `socket` library for UDP communication.
@@ -62,7 +62,7 @@ The code is designed to be clear and modifiable for different use cases, allowin
 import socket
 import pygame
 import sys
-from examples.control_packet import ControlPacket, SetpointMode
+from control_packet import ControlPacket, SetpointMode
 
 # Constants for communication and control
 UDP_IP = "127.0.0.1"
