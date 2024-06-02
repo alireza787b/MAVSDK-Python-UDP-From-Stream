@@ -76,8 +76,10 @@ pygame.display.set_caption('MAVSDK Offboard Control - Local Velocity Sender')
 # Colors, fonts, and initial settings
 BACKGROUND_COLOR = (30, 30, 30)
 TEXT_COLOR = (255, 255, 255)
+FOOTER_COLOR = (100, 100, 100)  # Less contrast for footer
 FONT = pygame.font.Font(None, 36)
 SMALL_FONT = pygame.font.Font(None, 24)
+FOOTER_FONT = pygame.font.Font(None, 18)  # Smaller font for footer
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 
@@ -103,6 +105,13 @@ def display_text(message, position, font=FONT, color=TEXT_COLOR):
     """Displays text on the Pygame screen at the given position."""
     text = font.render(message, True, color)
     screen.blit(text, position)
+    
+def display_footer():
+    """Displays the footer with copyright information on the Pygame screen."""
+    footer_text = "© 2024  GitHub: MAVSDK-Python-UDP-From-Stream | alireza787b"
+    text_surface = FOOTER_FONT.render(footer_text, True, FOOTER_COLOR)
+    text_rect = text_surface.get_rect(center=(screen.get_width() // 2, screen.get_height() - 10))
+    screen.blit(text_surface, text_rect)
 
 class Button:
     """Button class to create interactive GUI buttons."""
@@ -256,6 +265,7 @@ def main():
             display_text("Status: Disabled", (50, 100), font=SMALL_FONT, color=RED)
         display_text(f"Current Command: Vx={velocity_x:.2f}, Vy={velocity_y:.2f}, Vz={velocity_z:.2f}, Yaw Rate={yaw_rate:.2f}", (50, 500), font=SMALL_FONT)
         display_text(f"IP: {UDP_IP}, Port: {UDP_PORT}, Rate: {SEND_RATE}s", (50, 550), font=SMALL_FONT)
+        display_footer()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -324,7 +334,15 @@ def main():
     sock.close()
     pygame.quit()
 
+def display_footer_terminal():
+    """Displays the footer with copyright information."""
+    footer_text = "© 2024 Alireza Ghaderi | GitHub: MAVSDK-Python-UDP-From-Stream | alireza787b"
+    print("\n" + "-" * len(footer_text))
+    print(footer_text)
+    print("Visit: https://github.com/alireza787b/MAVSDK-Python-UDP-From-Stream")
+    print("-" * len(footer_text))
+
 if __name__ == "__main__":
     main()
-ضq
+    display_footer_terminal()
 
